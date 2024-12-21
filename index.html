@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise de Noël</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        #gift, #surprise {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+            transition: opacity 0.5s ease-in-out;
+        }
+        #surprise {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="gift" src="gift.jpg" alt="Cadeau fermé">
+        <img id="surprise" src="europa_park.jpg" alt="Week-end à Europa Park">
+    </div>
+
+    <script>
+        const gift = document.getElementById('gift');
+        const surprise = document.getElementById('surprise');
+
+        gift.addEventListener('click', () => {
+            gift.style.opacity = 0;
+            surprise.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
